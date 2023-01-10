@@ -2,6 +2,10 @@
 
 using namespace std;
 
+template <class C_type>
+void mySwap(C_type &, C_type &);
+
+
 int main(){
 	int x, y;
 	string a, b;
@@ -28,5 +32,14 @@ int main(){
 	cout << "p = " << p << ", q = " << q << "\n";
 
 	return 0;
+}
+
+
+template <class C_type>
+void mySwap(C_type &A, C_type &B){
+	C_type Z;
+	Z = A;
+	A = B;
+	B = Z;
 }
 
